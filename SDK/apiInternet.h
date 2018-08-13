@@ -1,10 +1,10 @@
 /************************************************/
 /*                                              */
 /*          AIMP Programming Interface          */
-/*               v4.00 build 1660               */
+/*               v4.50 build 2000               */
 /*                                              */
 /*                Artem Izmaylov                */
-/*                (C) 2006-2015                 */
+/*                (C) 2006-2017                 */
 /*                 www.aimp.ru                  */
 /*                                              */
 /*            Mail: support@aimp.ru             */
@@ -94,7 +94,7 @@ class IAIMPServiceHTTPClient: public IUnknown
 class IAIMPServiceHTTPClient2: public IUnknown
 {
 	public:
-		virtual HRESULT WINAPI Post(IAIMPString *URL, DWORD Method, DWORD Flags, 
+		virtual HRESULT WINAPI Request(IAIMPString *URL, DWORD Method, DWORD Flags,
 			IAIMPStream *AnswerData, IAIMPStream *PostData,
 			IAIMPHTTPClientEvents *EventHandler, IAIMPConfig *Params, void **TaskID) = 0;
 		virtual HRESULT WINAPI Cancel(void *TaskID, DWORD Flags) = 0;
